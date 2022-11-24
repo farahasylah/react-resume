@@ -1,0 +1,373 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Open+Sans:wght@400;600&display=swap');
+
+html{
+  scroll-behavior: smooth;
+  background: theme(colors.htmlbg);
+}
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 15px;
+  max-width: 1536px;
+  margin: 0 auto;
+}
+body *{
+  transition: all 0.2s ease;
+}
+body a{
+  cursor: pointer;
+  transition: 0.3s all ease;
+}
+h3{
+  color: theme(colors.darkmain);
+}
+.job_title{
+  background: theme(colors.info);
+}
+#section-resume .menu{
+  border-bottom: 2px solid theme(colors.main);
+}
+#section-resume .menu a{
+  transition: all 0.3s ease;
+  line-height: 1;
+  padding: 5px 10px;
+  border-radius: 10px 10px 0px 0px;
+}
+#section-resume .menu a.active{
+  border-color: theme(colors.main);
+  background: theme(colors.main);
+  color: #fff;
+}
+#section-resume .menu a:not(.active):hover{
+  border-color: theme(colors.info);
+  background: theme(colors.info);
+}
+#main-menu.fixed{
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  filter: drop-shadow(0 -20px 13px rgb(0 0 0 / 0.10)) drop-shadow(0 -8px 5px rgb(0 0 0 / 0.08));
+}
+@media only screen and (min-width: 640px){
+  #main-menu:not(.fixed) .menu a{
+    background: theme(colors.main);
+    box-shadow: 1px 0px 5px rgb(0 0 0 / 25%);
+   }
+  #main-menu:not(.fixed){
+    border-bottom: 2px solid theme(colors.darkmain);
+  }
+  #main-menu:not(.fixed) a{
+    border-radius: 10px 10px 0px 0px;
+    /* background: #5066de; */
+    height: 100%;
+  }
+  #main-menu:not(.fixed) a.active{
+    background: theme(colors.darkmain);
+  }
+  #main-menu:not(.fixed) .menu a:hover,#main-menu:not(.fixed) .menu a.active{
+    transform: translateY(-2.5px) scaleY(1.15);
+  }
+  #main-menu:not(.fixed) .menu a:hover span,#main-menu:not(.fixed) .menu a.active span{
+    transform: scaleY(0.85);
+  }
+  #main-menu:not(.fixed) .menu a.active{
+    background: theme(colors.darkmain);
+    color: #fff;
+  }
+}
+#main-menu.fixed .menu a.active{
+  background: theme(colors.main);
+  color: #fff;
+}
+.menu a{
+  cursor: pointer;
+  transition: 0.3s all ease;
+  height: 100%;
+  align-items: center;
+}
+.mode span{
+  font-size: 11px;
+  display: none;
+  margin-left: 5px;
+  font-weight: 600;
+}
+.mode a:hover span{
+  display:inline-block;
+}
+.mode a{
+  transition: all 0.5s ease;
+}
+.mode a:hover{
+  transform: translateX(1.5px) scaleX(1);
+}
+.secondary-font{
+  font-family: 'Open Sans', sans-serif;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.section-box {
+  background: #fff;
+  background: #ffffff91;
+}
+
+.tools, .skills{
+  list-style: none;
+}
+.tools, .tools *, .skills, .skills *{
+  transition: all 0.4s ease;
+  cursor: default;
+}
+.tools li {
+  line-height: 1.2;
+  text-align: center;
+  font-size: 15px;
+}
+.tools li:hover,
+.knowledge li:hover{
+  cursor: default;
+  animation: animate-gradient 2.2s ease infinite;
+  background-image: linear-gradient(
+    -61deg,
+    #fff 40%,
+    #dcdcfe 50%,
+    #dcdcfe 60%
+  );
+  background-size: 300% 300%;
+}
+.skills p{
+  background-color: theme(colors.info);
+}
+.skills p span{
+  border-radius: 50px;
+}
+.skills div{
+  float:right;
+  opacity: 0;
+}
+.skills li:hover div{
+  opacity: 1;
+}
+.skills li:hover span{
+  animation: animate-gradient 2.2s ease infinite;
+  background-image: linear-gradient(
+    -61deg,
+    #E8E8E8 40%,
+    #e11d48,
+    #e11d48
+  );
+  background-size: 300% 300%;
+}
+
+.animate-gradient {
+  animation: animate-gradient 2.2s ease infinite;
+  background-image: linear-gradient(
+    -61deg,
+    rgb(238, 238, 238) 40%,
+    rgb(245, 245, 245) 50%,
+    rgb(238, 238, 238) 60%
+  );
+  background-size: 300% 300%;
+}
+.experiences > .timeline:last-child .line,
+.education > .timeline:last-child .line{
+  display: none;
+}
+.timeline{
+  transition: all 0.5s ease;
+  cursor: default;
+}
+.timeline:hover .line{
+  animation: animate-gradient-vertical 2.2s ease infinite;
+  background-image: linear-gradient(
+    180deg,
+    #E8E8E8 40%,
+    theme(colors.main) 50%,
+    theme(colors.main) 60%
+  );
+  background-size: 400% 400%;
+}
+.timeline .year p:first-child{
+  text-align: center;
+  position: relative;
+}
+.timeline .year p{
+  background: #fff;
+}
+.timeline .year p:first-child::after{
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: theme(colors.main);
+  bottom: -10px;
+  left: calc(50% - 5px);
+  border-radius: 50%;
+}
+.timeline:hover .year p:first-child::before{
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #9297ff4f;
+  opacity:0.2;
+  animation: fade 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  bottom: -13px;
+  left: calc(50% - 8px);
+  border-radius: 50%;
+}
+.timeline:hover > .animateShine::before ,
+.githubRepo:hover .animateShine::before{
+  content: '';
+  position: absolute;
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  background: #ffffff91;
+  top: -3px;
+  left: -3px;
+  border-radius: 5px;
+  z-index: -1;
+  animation: animate-gradient 2.2s ease;
+  animation-iteration-count: 1;
+  background-image: linear-gradient(
+    -61deg,
+    #fff 40%,
+    theme(colors.main) 50%,
+    #ffffff91 60%
+  );
+  background-size: 300% 300%;
+}
+.timeline:hover > .animateShine::after,
+.githubRepo:hover .animateShine::after{
+  content: '';
+  position: absolute;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  background: #ececff;
+  top: -1px;
+  left: -1px;
+  border-radius: 5px;
+  z-index: -1;
+}
+.timeline:hover .job_title {
+  background: theme(colors.main);
+  transition: all 0.5s ease;
+  color: #fff;
+}
+.timeline:hover .year {
+  font-weight:bold;
+  transition: all 0.5s ease;
+}
+.timeline:hover *,
+.githubRepo:hover *{
+  z-index: 1;
+}
+.timeline 
+.line {
+  background: theme(colors.main);
+  width: 2px;
+  margin-left: calc(50% - 1px);
+  height: 100%;
+}
+.githubRepo a{
+  display: inline-block;
+  position: relative;
+}
+
+.animate-fade {
+  animation: fade 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes animate-gradient {
+  0% {
+    background-position: 100% 50%;
+  }
+  to {
+    background-position: 0 50%;
+  }
+}
+@keyframes animate-gradient-vertical {
+  0% {
+    background-position: 20% 10%;
+  }
+  to {
+    background-position: 0 70%;
+  }
+}
+
+/* DARK MODE */
+.dark #section-profile,.dark.App,.dark .works{
+  background: #313131;
+}
+.dark *{
+  color: #fff;
+}
+.dark .section-box{
+  background : theme(colors.darkmodeBox);
+}
+.dark .timeline .year p{
+  background : #202020;
+}
+
+.dark .timeline:hover > .animateShine::after, .dark.githubRepo:hover .animateShine::after{
+  background : #202020;
+}
+.dark .text-darkmain{
+  color: #fff;
+}
+.dark .mode a *{
+  color: theme(colors.darkmain);
+}
+.dark .bg-info, .dark .job_title{
+  background : theme(colors.darkmain);
+}
+.dark .tools li:hover,
+.dark .tools li:hover svg *,
+.dark .knowledge li:hover,
+.dark .knowledge li:hover svg *{
+  color: theme(colors.darkmain);
+}
+.dark .social-container .social-svg-mask *{
+  fill: #fff;
+  background : theme(colors.darkmain);
+}
+.dark .contact-details a:first-child svg{
+  fill: theme(colors.darkmain);
+  background: #fff;
+}
+.dark .social-container .social-svg-icon{
+  fill: theme(colors.darkmain) !important;
+  background: #fff;
+}
+.dark #main-menu.fixed > div:first-child{
+  border-top: 2px solid theme(colors.main);
+}
+.dark #main-menu.fixed > div:first-child{
+  border-top: 2px solid theme(colors.main);
+}
+@media only screen and (max-width: 1024px){
+  .github-stat > *{
+    float: left;
+    padding: 5px;
+  }
+}
+

@@ -1,0 +1,102 @@
+[
+    {
+        "name" : "Jane Doe",
+        "title" : "Web Developer",
+        "location" : "Malaysia",
+        "email" : "developer@gmail.com",
+        "summary" : [ 
+            {
+                "desc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            },
+            {
+                "desc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            }
+        ],
+        "socials" : [
+            {
+                "name" : "Github",
+                "link" : "https://github.com/janedoe"
+            },
+            {
+                "name" : "LinkedIn",
+                "link" : "https://www.linkedin.com/in/janedoe/"
+            }
+        ],
+        "skills" : [
+            { "skill" : "HTML" , "proficiency" : "100"},
+            { "skill" : "CSS" , "proficiency" : "100"},
+            { "skill" : "PHP" , "proficiency" : "90"},
+            { "skill" : "JavaScript" , "proficiency" : "80"},
+            { "skill" : "jQuery" , "proficiency" : "80"},
+            { "skill" : "WordPress" , "proficiency" : "90"},
+            { "skill" : "MySQL" , "proficiency" : "70"},
+            { "skill" : "SCSS / SASS" , "proficiency" : "60"},
+            { "skill" : "Git" , "proficiency" : "50"},
+            { "skill" : "Vue.js" , "proficiency" : "50"},
+            { "skill" : "React" , "proficiency" : "30"}
+        ],
+        "knowledge" : [
+            { "skill" : "Responsive Web Design" },
+            { "skill" : "Content Management Systems (CMS)" },
+            { "skill" : "Bootstrap" },
+            { "skill" : "TailwindCSS" },
+            { "skill" : "npm package manager" }
+
+        ],
+        "tools" : [
+            { "name" : "Visual Studio" },
+            { "name" : "Github" },
+            { "name" : "Postman" },
+            { "name" : "Sourcetree" },
+            { "name" : "Figma" },
+            { "name" : "Adobe Illustrator" },
+            { "name" : "Adobe Photoshop" }
+        ],
+        "attributes" : [
+            { "listItem" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+            { "listItem" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit." }
+        ],
+        "experiences" : [
+            { 
+                "position" : "Web Developer",
+                "year_from" : "2022",
+                "company" : "Company",
+                "location" : "Malaysia",
+                "responsibility" : [
+                    { "desc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+                    { "desc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+                    { "desc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+                    { "desc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+                    { "desc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
+                ]
+            },
+            { 
+                "position" : "Web Developer",
+                "year_from" : "2017",
+                "company" : "Company",
+                "location" : "Malaysia",
+                "responsibility" : [
+                    { "desc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+                    { "desc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+                    { "desc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+                    { "desc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+                    { "desc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
+                ]
+            }
+        ],
+        "education" : [
+            {
+                "course" : "Bachelor of Computer Science",
+                "year_from" : "2017",
+                "university" : "University",
+                "location" : "Malaysia"
+            },
+            {
+                "course" : "Foundation in IT",
+                "year_from" : "2012",
+                "university" : "University",
+                "location" : "Malaysia"
+            }
+        ]
+    }
+]
